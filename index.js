@@ -30,8 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     .go();
 });
 
-// Animation Loading Gsap
+// Animasi Aos
+AOS.init({
+  once: true,
+});
 
+
+// Animation Loading Gsap
 // Navbar
 gsap.from(".brand", {
   duration: 1,

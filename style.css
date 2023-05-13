@@ -1,9 +1,10 @@
 :root {
   --backgorund: rgba(14, 14, 14, 1);
 }
-
-body {
+html{
   scroll-behavior: smooth;
+}
+body {
   box-sizing: border-box;
   background-color: var(--backgorund);
 }
@@ -168,7 +169,7 @@ nav {
 }
 
 .resume-content{
-  margin: 100px -50px 0px 70px;
+  margin: 20px -50px 0px 70px;
 }
 .line-education {
   border-left: 1px solid #434343;
@@ -233,13 +234,10 @@ nav {
 
 #tools {
   overflow-x: hidden;
-  height: 900px;
+  height: 830px;
 }
 
-.tools-content {
-  list-style: none;
-  margin-top: 100px;
-}
+
 .tools-content li i {
   font-size: 40px;
   color: #d8d8d8d8;
@@ -262,8 +260,8 @@ nav {
   opacity: 0.1;
 }
 #tools span {
-  width: 711px;
-  height: 711px;
+  width: 631px;
+  height: 631px;
   right: -455px;
   top: 74px;
   background: linear-gradient(33.65deg, #0a0a0a 13.42%, #1c1c1c 50%);
@@ -309,14 +307,12 @@ nav {
 .content-portfolio li:hover .content-portfolio-1 {
   transition: all 0.5s;
   opacity: 90%;
-  /* transform: translateZ(0); */
 }
 .content-portfolio-1 {
   height: 300px;
   top: 0;
   opacity: 0;
   border: 2px solid #ffc107;
-  /* border-left: 14px solid #ffc107; */
   transition: all 0.5s;
 }
 .content-portfolio-1 div span a {
@@ -337,9 +333,7 @@ nav {
   height: 200px;
   padding-bottom: 15px;
 }
-.content-blog li {
-  /* margin-left: -20px; */
-}
+
 .content-blog a {
   text-decoration: none;
   color: #ffc107;
@@ -442,5 +436,49 @@ footer {
   height: 70px;
   border-top: 1px solid #434343;
 }
+
+
+
+/* Responsive desktop */
+@media screen and (max-width:992px){
+  nav{
+      background-color:black;
+  }
+  #tools,
+  #blog{
+      height: auto;
+  }
+  .resume-content{
+      margin: 0;
+    }
+
+}
+/* /Responsive desktop */
+
+/* Responsive Mobile */
+@media screen and (max-width:500px){
+  .social-media li{
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+  }
+  .jumbotron h1{
+      font-size: 35px;
+  }
+  .jumbotron p:nth-child(3){
+      font-size: 18px;
+  }
+  .jumbotron p:nth-child(4){
+      font-size: 15px;
+  }
+  .caption p:nth-child(3){
+      font-size: 15px;
+  }
+
+  .addreas li:nth-child(4) i{
+    width: 65px;
+  }
+}
+/* /Responsive Mobile */
 
 
