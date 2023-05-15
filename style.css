@@ -424,11 +424,11 @@ form button {
   width: 120px;
   height: 40px;
   border: none;
-  transition: all 0.3s;
+  transition: all 0.5s;
   background-color: #ffc107bc;
 }
-form button:hover {
-  transition: 0.3s;
+form button:hover{
+  transition: 0.5s;
   background-color: var(--backgorund);
   border: 2px solid #434343;
 }
