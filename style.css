@@ -325,6 +325,91 @@ nav {
   cursor: pointer;
 }
 
+/* design */
+.list-image, .image {
+  list-style: none;
+  
+}
+.list-image li{
+  margin: 5px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid var(--backgorund);
+}
+.list-image li:hover, .filter-active{
+  border: 2px solid #ffc107 !important;
+  color: white;
+
+}
+.image{
+  gap: 10px;
+}
+.image li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+}
+.image li:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.image li{
+  /* margin: 10px auto; */
+  max-height: 305px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  
+}
+.item-box figcaption{
+  transition: all 10s;
+  cursor: pointer;
+}
+.item-box:hover figcaption{
+  position: absolute;
+  /* top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 0.3s;
+  background-color: rgba(0, 0, 0, 0.556);
+}
+#design span {
+  width: 500px;
+  height: 500px;
+  left: 50px;
+  top: 400px;
+  background: linear-gradient(33.65deg, #0a0a0a 13.42%, #1c1c1c 50%);
+}
+#design t {
+  width: 900px;
+  height: 203px;
+  left: 10vw;
+  top:10px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 160px;
+  line-height: 203px;
+
+  background: linear-gradient(180.11deg, #ffffff 0.1%, rgba(255, 255, 255, 0) 99.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* /design */
+
 #blog {
   height: 700px;
 }
@@ -439,7 +524,7 @@ footer {
 
 
 
-/* Responsive desktop */
+/* Responsive laptop */
 @media screen and (max-width:992px){
   nav{
       background-color:black;
@@ -451,11 +536,20 @@ footer {
   .resume-content{
       margin: 0;
     }
+  .list{
+    font-size: 15px;
+  }
 
 }
-/* /Responsive desktop */
+/* /Responsive laptop */
 
 /* Responsive Mobile */
+@media screen and (max-width:576px) {
+  .image li{
+    max-height:fit-content;
+  }
+}
+
 @media screen and (max-width:500px){
   .social-media li{
       width: 30px;
@@ -477,6 +571,15 @@ footer {
 
   .addreas li:nth-child(4) i{
     width: 65px;
+  }
+  .list-image li{
+    margin:0;
+  }
+}
+
+@media screen and (max-width:320px){
+  .list-image{
+    flex-wrap: wrap;
   }
 }
 /* /Responsive Mobile */
