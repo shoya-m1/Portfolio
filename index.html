@@ -323,28 +323,35 @@
           <h1 class="text-light fw-bold lh-1" data-aos="fade-up" data-aos-duration="900">Design yang pernah saya buat</h1>
         </div>
 
-        <ul class="container list-image d-flex justify-content-center text-center mt-5 fw-semibold flex-wraps">
-          <li class="list filter-active" data-aos="zoom-in" data-aos-duration="500" data-filter="all">All</li>
-          <li class="list" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200" data-filter="ilus">Ilustrasi</li>
-          <li class="list" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400" data-filter="real">Realistic</li>
-          <li class="list" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600" data-filter="char">Char</li>
-        </ul>
+        <!-- radio buttin untuk filter gallery -->
+        <input type="radio" name="Photos" id="check1" checked >
+        <input type="radio" name="Photos" id="check2">
+        <input type="radio" name="Photos" id="check3">
+        <input type="radio" name="Photos" id="check4">
 
-        <ul class="container image col-lg-12 col-md- d-flex justify-content-center flex-wrap flex-row portfolio-container">
-          <li class="item-box col-lg-3 col-sm-4 col-11 ilus char" data-aos="zoom-in" data-aos-duration="600" >
+        <div class="container list-image d-flex justify-content-center text-center mt-5 fw-semibold flex-wraps">
+          <label for="check1" class="list filter-active" data-aos="zoom-in" data-aos-duration="500" data-filter="all">All</label>
+          <label for="check2" class="list" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200" data-filter="ilus">Ilustrasi</label>
+          <label for="check3" class="list" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400" data-filter="real">Realistic</label>
+          <label for="check4" class="list" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600" data-filter="char">Char</label>
+        </div>
+
+    
+        <ul class="container image col-lg-12 col-md- d-flex justify-content-center flex-wrap flex-row portfolio-container mt-4">
+          <li class="item-box col-lg-3 col-sm-4 col-11 char" data-aos="zoom-in" data-aos-duration="600" >
             <img src="Asset/col1.jpeg" alt="">
             <figcaption>
                   
             </figcaption>
           </li>
-          <li class="item-box col-lg-3 col-sm-4 col-11 real char" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+          <li class="item-box col-lg-3 col-sm-4 col-11 real" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
             <img src="Asset/gambar.png" alt="">
             <figcaption>
 
             </figcaption>
           </li>
-          <li class="item-box col-lg-3 col-sm-4 col-11 real char" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
-            <img src="Asset/col3.png" alt="">
+          <li class="item-box col-lg-3 col-sm-4 col-11 real" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
+            <img src="Asset/puan1.png" alt="">
             <figcaption>
 
             </figcaption>
@@ -367,20 +374,20 @@
 
             </figcaption>
           </li>
-          <li class="item-box col-lg-3 col-sm-4 col-11 ilus char" data-aos="zoom-in" data-aos-duration="600">
+          <li class="item-box col-lg-3 col-sm-4 col-11 char" data-aos="zoom-in" data-aos-duration="600">
             <img src="Asset/kotak3.jpeg" alt="">
             <figcaption>
 
             </figcaption>
           </li>
-          <li class="item-box col-lg-3 col-sm-4 col-11 real char" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+          <li class="item-box col-lg-3 col-sm-4 col-11 real" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
             <img src="Asset/col5.png" alt="">
             <figcaption>
 
             </figcaption>
           </li>
-          <li class="item-box col-lg-3 col-sm-4 col-11 ilus char" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
-            <img src="Asset/col4.jpeg" alt="">
+          <li class="item-box col-lg-3 col-sm-4 col-11 char" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
+            <img src="Asset/kotak4.jpeg" alt="">
             <figcaption>
 
             </figcaption>
@@ -520,7 +527,6 @@
 
     <!-- Javascript -->
     <script src="index.js"></script>
-
 
     <!-- Typit Js -->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>

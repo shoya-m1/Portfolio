@@ -118,15 +118,15 @@ gsap.from(".resume-style p",{
 
 // design
 $(document).ready(function(){
-  $('.list').click(function(){
-    const value = $(this).attr('data-filter');
-    if (value == 'all'){
-      $('.item-box').show('3000');
-    }else{
-      $('.item-box').not('.'+value).hide('1000');
-      $('.item-box').filter('.'+value).show('1000');
-    }
-  })
+  // $('.list').click(function(){
+  //   const value = $(this).attr('data-filter');
+  //   if (value == 'all'){
+  //     $('.item-box').show('3000');
+  //   }else{
+  //     $('.item-box').not('.'+value).hide('1000');
+  //     $('.item-box').filter('.'+value).show('1000');
+  //   }
+  // })
   // remove link active
   $('.list').click(function(){
     $(this).addClass('filter-active').siblings().removeClass('filter-active');

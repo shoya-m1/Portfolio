@@ -326,11 +326,17 @@ nav {
 }
 
 /* design */
+#design {
+  height: 1300px;
+}
 .list-image, .image {
   list-style: none;
   
 }
-.list-image li{
+#design input{
+  display: none;
+}
+.list-image label{
   margin: 5px;
   padding: 8px 18px;
   border-radius: 50px;
@@ -338,7 +344,7 @@ nav {
   transition: all 0.3s;
   border: 2px solid var(--backgorund);
 }
-.list-image li:hover, .filter-active{
+.list-image label:hover, .filter-active{
   border: 2px solid #ffc107 !important;
   color: white;
 
@@ -368,19 +374,42 @@ nav {
 .item-box figcaption{
   transition: all 10s;
   cursor: pointer;
-}
-.item-box:hover figcaption{
   position: absolute;
-  /* top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px; */
   top: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  transform: scale(0);
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.556);
+
+}
+.item-box figcaption::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 10px;
+  background-color: none;
+  border-top: solid 2px #ffc107;
+  border-left: solid 2px #ffc107;
+}
+.item-box figcaption::after{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
   right: 0;
   bottom: 0;
-  left: 0;
-  transition: all ease-in-out 0.3s;
-  background-color: rgba(0, 0, 0, 0.556);
+  border-bottom-right-radius: 10px;
+  background-color: none;
+  border-right: solid 2px #ffc107;
+  border-bottom: solid 2px #ffc107;
+}
+.item-box:hover figcaption{
+  transform: scale(1);
+  transition: all ease-in-out 0.6;
 }
 #design span {
   width: 500px;
@@ -407,6 +436,24 @@ nav {
   opacity: 0.1;
   z-index: -1;
 }
+
+/* filter galley fersi css */
+/* porses ini menhilangkan object */
+#check2:checked ~ .image .real,
+#check3:checked ~ .image .ilus,
+#check3:checked ~ .image .char,
+#check4:checked ~ .image .ilus,
+#check4:checked ~ .image .real{
+  transform: scale(1);
+  transition: all ease-in 0.7s;
+  display: none;
+}
+
+
+
+
+
+/* /filter galley fersi css */
 
 /* /design */
 
@@ -519,6 +566,7 @@ form button:hover{
 }
 footer {
   height: 70px;
+  font-size: 13px;
   border-top: 1px solid #434343;
 }
 
@@ -527,7 +575,7 @@ footer {
 /* Responsive laptop */
 @media screen and (max-width:992px){
   nav{
-      background-color:black;
+      background-color:var(--backgorund);
   }
   #tools,
   #blog{
