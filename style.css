@@ -360,7 +360,6 @@ nav {
   transition: all 0.4s;
 }
 .image li{
-  /* margin: 10px auto; */
   max-height: 305px;
   overflow: hidden;
   position: relative;
@@ -377,7 +376,10 @@ nav {
   background-color: #0a0a0a00;
   z-index: 9999;
   padding: 20px 0px;
+  display: flex;
   transition: .6s;
+  align-items: center;
+  justify-content: center;
 
 }
 .overlay:target{
@@ -389,6 +391,7 @@ nav {
 }
 .overlay img{
   max-height: 100%;
+  max-width: 100%;
 }
 .overlay:target img{
   animation: zoomInFade .5s;
@@ -398,28 +401,28 @@ nav {
   top: 15px;
   right: 10%;
   font-size: 25px;
-  color: white;
+  color: #ffc107;
 }
 .right{
-  margin-left:20px ;
+  position: absolute;
+  right: 10%;
   font-size: 40px;
-  color: white;
+  top: 50%;
+  color: #ffc107;
+  background-color: rgba(2, 2, 2, 0.623);
+  padding: 5px 15px;
+  border-radius: 50%;
 }
 .left{
-  margin-right: 20px;
+  position: absolute;
+  top: 50%;
+  z-index: 99999;
+  left: 10%;
   font-size: 40px;
-  color: white;
-}
-
-@keyframes zoomInFade {
-  0%{
-    transform: scale(0);
-    opacity: 0;
-  }
-  100%{
-    transform: scale(1);
-    opacity: 1;
-  }
+  color: #ffc107;
+  background-color: rgba(2, 2, 2, 0.623);
+  padding: 5px 15px;
+  border-radius: 50%;
 }
 
 
@@ -481,13 +484,7 @@ figcaption .link-pluss{
 }
 
 
-#design span {
-  width: 500px;
-  height: 500px;
-  left: 50px;
-  top: 400px;
-  background: linear-gradient(33.65deg, #0a0a0a 13.42%, #1c1c1c 50%);
-}
+
 #design t {
   width: 900px;
   height: 203px;
@@ -514,12 +511,28 @@ figcaption .link-pluss{
 #check3:checked ~ .image .char,
 #check4:checked ~ .image .ilus,
 #check4:checked ~ .image .real{
-  transform: scale(1);
   transition: all ease-in 0.7s;
   display: none;
 }
 
+#check1:checked ~ .image .item-box,
+#check2:checked ~ .image .ilus,
+#check2:checked ~ .image .char,
+#check3:checked ~ .image .real,
+#check4:checked ~ .image .char{
+  animation: zoomInFade .4s;
+}
 
+@keyframes zoomInFade {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 
 

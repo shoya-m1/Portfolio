@@ -133,27 +133,3 @@ $(document).ready(function(){
   })
 })
 
-
-// var swiper = new Swiper(".mySwiper", {
-//  loop:true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
-// lightGllery(document.querySelector('.image'));
-
-// $(document).ready(function(){
-
-//   $('.image').magnificPopup({
-
-//       delegate:'a',
-//       type:'image',
-//       gallery:{
-//           enabled:true
-//       }
-
-//   });
-
-// });
