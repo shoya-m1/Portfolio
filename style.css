@@ -326,9 +326,6 @@ nav {
 }
 
 /* design */
-#design {
-  height: 1300px;
-}
 .list-image, .image {
   list-style: none;
   
@@ -347,7 +344,6 @@ nav {
 .list-image label:hover, .filter-active{
   border: 2px solid #ffc107 !important;
   color: white;
-
 }
 .image{
   gap: 10px;
@@ -371,18 +367,75 @@ nav {
   border-radius: 10px;
   
 }
+.overlay{
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 0;
+  left:0;
+  background-color: #0a0a0a00;
+  z-index: 9999;
+  padding: 20px 0px;
+  transition: .6s;
+
+}
+.overlay:target{
+  width: auto;
+  height: auto;
+  bottom:0;
+  right: 0;
+  background-color: #0a0a0a75;
+}
+.overlay img{
+  max-height: 100%;
+}
+.overlay:target img{
+  animation: zoomInFade .5s;
+}
+.close{
+  position: absolute;
+  top: 15px;
+  right: 10%;
+  font-size: 25px;
+  color: white;
+}
+.right{
+  margin-left:20px ;
+  font-size: 40px;
+  color: white;
+}
+.left{
+  margin-right: 20px;
+  font-size: 40px;
+  color: white;
+}
+
+@keyframes zoomInFade {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 .item-box figcaption{
   transition: all 10s;
   cursor: pointer;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom:0;
   width: 100%;
-  border-radius: 10px;
   height: 100%;
-  transform: scale(0);
-  transition: all 0.5s;
-  background-color: rgba(0, 0, 0, 0.556);
+  border-radius: 10px;
+  transform: scale(.7);
+  transition: all 0.4s;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.556) ;
 
 }
 .item-box figcaption::before{
@@ -409,8 +462,25 @@ nav {
 }
 .item-box:hover figcaption{
   transform: scale(1);
-  transition: all ease-in-out 0.6;
+  opacity: 100%;
+  transition: all ease-in-out 0.4s;
 }
+figcaption div:nth-child(1){
+  margin-top: 40%;
+  /* align-items: flex-end; */
+}
+#close-6 figcaption div:nth-child(1){
+  margin-top: 30%;
+}
+figcaption .link-pluss{
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  padding: 0px 7px;
+  border: 2px solid #ffc107;
+}
+
+
 #design span {
   width: 500px;
   height: 500px;
