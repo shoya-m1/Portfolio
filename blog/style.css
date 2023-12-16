@@ -1,0 +1,477 @@
+:root {
+  --backgorund: rgba(14, 14, 14, 1);
+  --color: #ffc107;
+}
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: var(--backgorund);
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  max-width: 1380px;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+}
+nav {
+  position: fixed;
+  width: 1380px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav ul li .active{
+  color: #ffc107;
+}
+
+@media screen and (max-width: 1370px) {
+  nav {
+    width: 100vw;
+  }
+}
+.logo h1 {
+  color: white;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+nav ul li {
+  display: inline;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ul li a:hover {
+  color: #ffc107;
+}
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+.jumbotron {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(16, 0, 88, 0.63), rgba(0, 0, 0, 0.801), rgba(151, 5, 49, 0.438)), url("img/gambar3.jpg") no-repeat bottom/cover;
+  background-attachment: fixed;
+
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+.jumbotron div {
+  width: 50%;
+  margin: auto;
+
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+}
+.jumbotron h1 {
+  line-height: 0.5;
+}
+.jumbotron p {
+  font-size: 15px;
+}
+.jumbotron p:first-child {
+  color: var(--color);
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+#blog {
+  padding-top: 50px;
+  width: 60%;
+}
+
+#blog article section {
+  color: whitesmoke;
+  padding-bottom: 50px;
+}
+#blog article section div:nth-child(3) {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+#blog article h1 {
+  color: #ffc107;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+#blog article section img {
+  width: 100%;
+}
+#blog article section div p {
+  border: 1px solid white;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  border-radius: 3px;
+}
+#blog article section div:nth-child(2) {
+  display: flex;
+  gap: 10px;
+  margin-top: -20px;
+}
+#blog article section p:nth-child(4) {
+  text-align: justify;
+  line-height: 25px;
+}
+#blog button {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 50px;
+  margin-top: 10px;
+  border: 2px solid var(--color);
+
+  font-weight: 500;
+  text-transform: capitalize;
+  background: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+#blog button:hover {
+  background-color: var(--color);
+}
+aside {
+  width: 30%;
+  overflow: hidden;
+}
+#kategori {
+  text-transform: capitalize;
+  color: white;
+  padding-top: 50px;
+}
+#kategori h2 {
+  color: #ffc107;
+}
+#kategori p {
+  border-bottom: 1px solid white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#kategori p:hover {
+  border-radius: 5px;
+  background-color: #ecad00;
+  padding-left: 10px;
+}
+#kategori .active {
+  background-color: #ecad00;
+  padding-left: 10px;
+}
+
+#tags {
+  text-transform: capitalize;
+  color: white;
+  padding-top: 50px;
+}
+#tags div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+#tags h2 {
+  color: #ffc107;
+}
+#tags p {
+  border: 1px solid white;
+  padding: 0px 12px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  border-radius: 30px;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+
+  margin-top: -6px;
+}
+#tags div p:hover {
+  background-color: #ecad00;
+}
+#tags .active {
+  background-color: #ecad00;
+}
+
+#profile {
+  color: whitesmoke;
+  text-transform: capitalize;
+  font-family: "roboto", sans-serif;
+  padding-top: 50px;
+}
+#profile header h2 {
+  color: #ffc107;
+}
+#profile header div {
+  max-width: 250px;
+  max-height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+}
+#profile table {
+  margin-top: 20px;
+}
+#profile header img {
+  width: 100%;
+}
+#profile table th {
+  font-weight: 600;
+  text-align: left;
+}
+
+.contact div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.contact div i {
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+.contact div div {
+  display: block;
+}
+.contact div h3 {
+  color: #ffc107;
+  margin-bottom: -5px;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif !important;
+}
+.contact p {
+  font-size: 15px;
+}
+.social-media {
+  display: flex !important;
+  gap: 10px !important;
+}
+.social-media a {
+  color: white;
+  text-decoration: none;
+}
+.social-media a i {
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.social-media a i:hover {
+  background-color: #ecad00;
+}
+#profile footer h2 {
+  color: #ffc107;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.form input,
+.form textarea {
+  background: none;
+  border: 1px solid var(--color);
+  outline: none;
+  color: whitesmoke;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 15px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.form textarea {
+  height: 150px;
+  padding: 10px 15px;
+}
+.form button {
+  width: 150px;
+  height: 40px;
+  background-color: #ecad00;
+  border: 1px solid #ecad00;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.form button:hover {
+  background: none;
+}
+.footer {
+  font-family: "Poppins", sans-serif;
+  height: 70px;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  color: white;
+  border-top: 1px solid rgba(245, 245, 245, 0.394);
+}
+.form textarea:focus,
+.form input:focus {
+  outline: 2px solid #ecad00;
+}
+#mail {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 995px) {
+  .contact div i {
+    display: none;
+  }
+}
+@media screen and (max-width: 762px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    margin-left: -100px;
+  }
+  nav button{
+    margin-right: -100px;
+  }
+  nav button {
+    display: inline;
+  }
+  nav ul {
+    position: absolute;
+    flex-direction: column;
+    top: 20px;
+    padding: 20px auto;
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    gap: 20px;
+    transform: translateY(-110%);
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in;
+  }
+  nav ul.slide {
+    transform: translateY(0);
+  }
+  .jumbotron div {
+    width: 90%;
+  }
+
+  #blog {
+    width: 90%;
+  }
+  aside {
+    width: 80%;
+  }
+  aside h2 {
+    font-size: 20px;
+  }
+  .social-media a i {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+  .contact div i {
+    display: flex;
+  }
+  #mail {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .contact div i {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #blog section h1 {
+    font-size: 25px;
+  }
+  #blog article section div p {
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+  }
+  #blog article section p:nth-child(4) {
+    text-align: justify;
+    line-height: 22px;
+    font-size: 15px;
+  }
+  #blog button {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 50px;
+    margin-top: 10px;
+    border: 1px solid var(--color);
+
+    font-weight: 500;
+    text-transform: capitalize;
+    background: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .jumbotron h1 {
+    font-size: 6.6vw;
+  }
+  .jumbotron p {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 387px) {
+  .contact div i {
+    display: none;
+  }
+}
