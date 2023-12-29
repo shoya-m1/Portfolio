@@ -38,6 +38,77 @@ nav {
   margin: 0px 5px;
 }
 
+/* menu nav */
+
+.navbar-menu {
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  background-color: transparent;
+  display: none;
+}
+
+#checkbox2 {
+  display: none;
+}
+
+.toggle2 {
+  position: relative;
+  width: 30px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(194, 194, 194);
+  border-radius: 6px;
+}
+
+#bar5 {
+  transition-duration: 0.8s;
+}
+
+#bar4,
+#bar6 {
+  width: 80%;
+}
+
+#checkbox2:checked + .toggle2 .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar5 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar4 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar6 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* /menu-nav */
+
 .style-header-1 {
   position: absolute;
   width: 636px;
@@ -177,6 +248,8 @@ nav {
   font-family: "Raleway", sans-serif;
 }
 
+/* resume */
+
 .resume-content {
   margin: 20px -50px 0px 70px;
 }
@@ -244,6 +317,75 @@ nav {
   opacity: 0.1;
 }
 
+/* /resume */
+
+/* certificate */
+#certificate {
+  overflow-x: hidden;
+  min-height: 830px;
+}
+
+.certificate-content {
+  gap: 80px;
+}
+
+.certificate-content li i {
+  font-size: 40px;
+  color: #d8d8d8d8;
+}
+
+.certificate-title img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  filter: brightness(90%);
+}
+.certificate-content li button {
+  width: 150px;
+  font-size: 16px;
+  height: 45px;
+  background-color: transparent !important;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.certificate-content li button:hover {
+  background-color: white !important;
+  color: #0a0a0a;
+  border: 1px solid black;
+}
+.certificate-style {
+  width: 800px;
+  height: 203px;
+  right: -30px;
+  top: 30px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 160px;
+  line-height: 203px;
+  background: linear-gradient(180.11deg, #ffffff 0.1%, rgba(255, 255, 255, 0) 99.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.1;
+}
+#certificate span {
+  width: 431px;
+  height: 431px;
+  left: -155px;
+  bottom: 0px;
+  background: linear-gradient(33.65deg, #0a0a0a 13.42%, #1c1c1c 50%);
+}
+
+/* /tools */
+
+/* resume */
+
+/* tools */
 #tools {
   overflow-x: hidden;
   height: 830px;
@@ -277,6 +419,8 @@ nav {
   top: 74px;
   background: linear-gradient(33.65deg, #0a0a0a 13.42%, #1c1c1c 50%);
 }
+
+/* /tools */
 
 #portfolio span:nth-child(1) {
   width: 711px;
@@ -315,9 +459,7 @@ nav {
 .content-portfolio li:hover img {
   transform: scale(1.1);
 }
-.content-portfolio-1 {
-  min-width: 600px;
-}
+
 .content-portfolio li:hover .content-portfolio-1 {
   transition: all 0.5s;
   opacity: 90%;
@@ -338,10 +480,10 @@ nav {
   color: #ffc107;
   cursor: pointer;
 }
-
-
-
-/* /filter galley fersi css */
+.BookShelf {
+  width: 125%;
+  height: 125%;
+}
 
 /* /design */
 
@@ -459,9 +601,12 @@ footer {
 }
 
 /* Responsive laptop */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   nav {
     background-color: var(--backgorund);
+  }
+  .navbar-menu {
+    display: inline;
   }
   #tools,
   #blog {
@@ -473,13 +618,25 @@ footer {
   .list {
     font-size: 15px;
   }
+  .certificate-content li p {
+    text-align: justify;
+  }
 }
+
 /* /Responsive laptop */
 
 /* Responsive Mobile */
 @media screen and (max-width: 576px) {
   .image li {
     max-height: fit-content;
+  }
+
+  .certificate-content li div img {
+    display: none;
+  }
+
+  .certificate-content {
+    margin-top: 50px;
   }
 }
 
